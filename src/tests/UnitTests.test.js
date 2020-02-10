@@ -1,6 +1,6 @@
 import React from "react";
 import { create } from "react-test-renderer";
-import renderer from "react-test-renderer";
+//import renderer from "react-test-renderer";
 
 import Keys from "../components/Keys";
 import { Add, Subtract, Multiply } from "../components/TriggerFunctions";

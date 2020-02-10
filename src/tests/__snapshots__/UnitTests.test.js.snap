@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Keys class component it should make a snapshot test 1`] = `
+<div
+  className="calculator"
+  onClick={[Function]}
+>
+  <div>
+    <input
+      id="screen"
+      maxLength="20"
+      type="text"
+    />
+    <input
+      id="result"
+      maxLength="20"
+      type="text"
+    />
+  </div>
+  <div
+    className="calc-buttons"
+  >
+    <div
+      className="functions-one"
+    >
+      <button
+        className="button triggers"
+      >
+        Clear
+      </button>
+      <button
+        className="button basic-stuff"
+      >
+        *
+      </button>
+      <button
+        className="button basic-stuff"
+      >
+        -
+      </button>
+      <button
+        className="button numbers"
+      >
+        VII
+      </button>
+      <button
+        className="button numbers"
+      >
+        VIII
+      </button>
+      <button
+        className="button numbers"
+      >
+        IX
+      </button>
+      <button
+        className="button numbers"
+      >
+        IV
+      </button>
+      <button
+        className="button numbers"
+      >
+        V
+      </button>
+      <button
+        className="button numbers"
+      >
+        VI
+      </button>
+      <button
+        className="button numbers"
+      >
+        I
+      </button>
+      <button
+        className="button numbers"
+      >
+        II
+      </button>
+      <button
+        className="button numbers"
+      >
+        III
+      </button>
+      <button
+        className="button numbers"
+      >
+        X
+      </button>
+      <button
+        className="button numbers"
+      >
+        L
+      </button>
+      <button
+        className="button numbers"
+      >
+        C
+      </button>
+      <button
+        className="button numbers"
+      >
+        D
+      </button>
+      <button
+        className="button numbers"
+      >
+        M
+      </button>
+      <button
+        className="button basic-stuff"
+      >
+        +
+      </button>
+      <button
+        className="button basic-stuff"
+      >
+        =
+      </button>
+    </div>
+  </div>
+</div>
+`;
