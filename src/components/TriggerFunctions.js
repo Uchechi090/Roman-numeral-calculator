@@ -12,22 +12,21 @@ export const SyntaxErr = value => {
   }
 };
 
-export const Equals = value => {
-  if (value.indexOf("^") > -1) {
-    var base = value.slice(0, value.indexOf("^"));
-    var exponent = value.slice(value.indexOf("^") + 1);
-    value = eval("Math.pow(" + base + "," + exponent + ")");
-  } else {
-    value = eval(value);
-    //checkLength();
-    SyntaxErr();
-  }
-};
+// export const Equals = value => {
+//   if (value.indexOf("^") > -1) {
+//     var base = value.slice(0, value.indexOf("^"));
+//     var exponent = value.slice(value.indexOf("^") + 1);
+//     value = eval("Math.pow(" + base + "," + exponent + ")");
+//   } else {
+//     value = eval(value);
+//     //checkLength();
+//     SyntaxErr();
+//   }
+// };
 
-export const Clear = _value => (_value = "");
+export const Multiply = (x, y) => x * y;
 
-export const Multiply = value => (value += "*");
+export const Add = (x, y) => x + y;
 
-export const Add = value => (value += "+");
+export const Subtract = (x, y) => x - y;
 
-export const Subtract = value => (value += "-");

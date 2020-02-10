@@ -1,6 +1,8 @@
+import { Add, Subtract, Multiply } from "./TriggerFunctions";
+
 export const convertToRoman = num => {
-  var decimalValue = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-  var romanNumeral = [
+  let decimalValue = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  let romans = [
     "M",
     "CM",
     "D",
@@ -16,16 +18,16 @@ export const convertToRoman = num => {
     "I"
   ];
 
-  var romanized = "";
+  let romanValue = "";
 
-  for (var index = 0; index < decimalValue.length; index++) {
-    while (decimalValue[index] <= num) {
-      romanized += romanNumeral[index];
-      num -= decimalValue[index];
+  for (let i = 0; i < decimalValue.length; i++) {
+    while (decimalValue[i] <= num) {
+      romanValue += romans[i];
+      num -= decimalValue[i];
     }
   }
 
-  return romanized;
+  return romanValue;
 };
 
 const CharToInt = c => {
@@ -49,20 +51,33 @@ const CharToInt = c => {
   }
 };
 
-export const RomanToInt = str1 => {
-  if (str1 == null) return -1;
-  var num = CharToInt(str1.charAt(0));
-  var pre, curr;
+export const RomanToInt = str => {
+  if (str == null) return -1;
+  let num = CharToInt(str.charAt(0));
+  let previous, current;
 
-  for (var i = 1; i < str1.length; i++) {
-    curr = CharToInt(str1.charAt(i));
-    pre = CharToInt(str1.charAt(i - 1));
-    if (curr <= pre) {
-      num += curr;
+  for (let i = 1; i < str.length; i++) {
+    current = CharToInt(str.charAt(i));
+    previous = CharToInt(str.charAt(i - 1));
+    if (current <= previous) {
+      num += current;
     } else {
-      num = num - pre * 2 + curr;
+      num = num - previous * 2 + current;
     }
   }
 
   return num;
+};
+
+export const Compute = (prevConValue, op, currConValue) => {
+  switch (op) {
+    case "+":
+      return Add(prevConValue, currConValue);
+    case "-":
+      return Subtract(prevConValue, currConValue);
+    case "*":
+      return Multiply(prevConValue, currConValue);
+    default:
+      return null;
+  }
 };
